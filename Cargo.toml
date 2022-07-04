@@ -1,0 +1,32 @@
+[package]
+name = "union_monitor"
+version = "0.1.0"
+authors = ["donghaic <caidonghai@zhangyue.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4"
+
+serde = { version = "1.0", features = ["derive"] }
+serde_derive = "1.0"
+serde_json = "1.0"
+serde_yaml = "0.8"
+
+rdkafka = { version = "0.25", features = ["cmake-build"] }
+redis = { version = "0.17.0", features = ["tokio-comp"] }
+log = "0.4"
+job_scheduler = "*"
+r-cache = "*"
+tokio = { version = "1.5.0", features = ["full"] }
+sled = "0.34"
+thiserror = "1"
+chrono = "0.4"
+base64-url = "1.4.9"
+futures = "0.3"
+anyhow = "1.0"
+
+[dev-dependencies]
+tokio-test = "*"
+actix-rt = "*"

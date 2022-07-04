@@ -1,0 +1,58 @@
+# 启动端口
+port: 8080
+
+pidfile: ./ssp.pid
+
+# 系统环境 production
+env: dev
+
+# IP城市库文件
+ip_lib: ./ipdb.ipdb
+
+# 日志目录
+log_dir: ./logs
+
+#DSP超时时间
+dsp_timeout_ms: 1000
+
+# Redis 配置
+redis:
+  #  address: 123.57.68.113:8089
+  host: 127.0.0.1
+  port: 6379
+  password:
+  db: 1
+
+mysql:
+  #  host: 123.57.68.113
+  #  port: 8088
+  #  user: zhangyue_ads
+  #  db: ads_prod
+  #  password: vd25b9&jupct%4kqx
+  host: 123.57.68.113
+  port: 8090
+  user: root
+  db: ads_test
+  password: zhangyue@123
+
+kafka:
+  client_id: producer1
+  brokers: localhost:9092
+
+topics:
+  app_req: SspAppReqLogDev
+  dsp_req: SspDspReqLogDev
+  monitor: SspMonitorLogDev
+  event_status: SspEventStatusLogDev
+  preload_track: SspPreloadLogDev
+  adx_creative: SspAdxCreativeLogDev
+  ad_cfg: SspAdCfgLogDev
+  filter_err: SspFilterErrLogDev
+  pv_req: SspPvReqLogDev
+  ac_req: SspActivityReqLogDev
+  report_err: SspReportReqLogDev
+  reader_union_uv_report: SspReaderUnionUvReportDev
+  reader_union_read_time_report: SspReaderUnionReadTimeReportDev
+
+
+loader_interval_second: 60
